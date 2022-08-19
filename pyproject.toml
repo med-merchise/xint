@@ -18,6 +18,8 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
+sphinx = "^5.2.3"
+sphinx-autodoc-annotation = "^1.0.post1"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^5.0.4"
