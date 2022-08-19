@@ -1,9 +1,16 @@
 xit.books: documentation manager based on Sphinx
 ================================================
 
+
+Contents
+--------
+
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :glob:
+
+   HISTORY
+   AUTHORS
 
 
 Indices and tables
