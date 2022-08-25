@@ -9,6 +9,8 @@ Contents
    :maxdepth: 1
    :glob:
 
+   backlog
+
    HISTORY
    AUTHORS
 
