@@ -11,6 +11,7 @@ Contents
 
    adrs
    backlog
+   faqs
 
    HISTORY
    AUTHORS

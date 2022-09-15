@@ -20,6 +20,11 @@ Full list
     echo "Jupyter.notebook.set_autosave_interval(0);" \
          >> ~/.jupyter/custom/custom.js
 
+  This is to avoid a warning, see why on the FAQ `"Jupyter warns me that the
+  file has changed on disk" <jupyter-warn_>`__.
+
+.. _jupyter-warn: https://jupytext.readthedocs.io/en/latest/faq.html#jupyter-warns-me-that-the-file-has-changed-on-disk
+
 - `voila` - the ``jupyter lab`` preview extension for `Voilà <voila_>`__
   needs to be installed with::
 
