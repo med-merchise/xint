@@ -21,6 +21,7 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
     'sphinx.ext.ifconfig',
+    'myst_nb',  # 'myst_parser' is used too
 ]
 
 templates_path = ['_templates']
