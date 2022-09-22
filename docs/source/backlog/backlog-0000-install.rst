@@ -11,17 +11,26 @@ Rationale:
 Full list
 ---------
 
-- `jupytext` - this tool allows a notebook can use a pair of files, for
-  example, ``.md`` and ``.py``.  These two files are synchronized in the
-  background when one is modified.  For that reason we disabled globally the
-  option ``auto-save`` for Jupyter Notebooks::
+- `jupytext` - this tool allows a notebook to use a pair of files to represent
+  a single notebook, for example, ``.md`` and ``.py``.  The two files are
+  synchronized in the background when one of them is modified.  For that
+  reason, to avoid a `warning using notebooks <jupyter-warn_>`__, we disabled
+  globally the option ``auto-save`` when ``jupytext`` is used.
 
-    mkdir -p ~/.jupyter/custom
-    echo "Jupyter.notebook.set_autosave_interval(0);" \
-         >> ~/.jupyter/custom/custom.js
+  Add to the file ``~/.jupyter/custom/custom.js``.  ::
 
-  This is to avoid a warning, see why on the FAQ `"Jupyter warns me that the
-  file has changed on disk" <jupyter-warn_>`__.
+    $([IPython.events]).on("notebook_loaded.Notebook", function () {
+      IPython.notebook.set_autosave_interval(0);
+    });
+
+  Also, use a convention in order to include only one of the files to version
+  control; ignore the ``.py``.  We use the the following naming convention in
+  my ``.gitignore`` file::
+
+    *-notebook.py
+    *-nb.py
+    *-lab.py
+    *-paired.py
 
 .. _jupyter-warn: https://jupytext.readthedocs.io/en/latest/faq.html#jupyter-warns-me-that-the-file-has-changed-on-disk
 
