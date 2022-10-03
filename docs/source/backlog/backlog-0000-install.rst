@@ -38,5 +38,3 @@ Full list
   needs to be installed with::
 
     jupyter labextension install @jupyter-voila/jupyterlab-preview
-
-.. _voila: https://www.kylabendt.com/blog/setting-up-jupyterlab-and-voila/
