@@ -20,19 +20,18 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-sphinx = "^5.2.3"
+sphinx = "^5.3.0"
 xit = {path = "../xit", develop = true}    # See README file
 sphinx-autodoc-annotation = "^1.0.post1"
-matplotlib = { version = "^3.6.0", optional = true }
-jupyterlab = { extras = ["docs"], version = "^3.4.5", optional = true }
-myst-nb = { version = "^0.16.0", optional = true }
-jupytext = { version = "^1.14.1", optional = true }
-jupyterlab-code-formatter = { version = "^1.5.3", optional = true }
-numpydoc = { version = "^1.4.0", optional = true }
-pydata-sphinx-theme = { version = "^0.10.1", optional = true }
+matplotlib = {version = "^3.6.1", optional = true}
+myst-nb = {version = "^0.17.1", optional = true}
+jupytext = {version = "^1.14.1", optional = true}
+numpydoc = {version = "^1.5.0", optional = true}
+pydata-sphinx-theme = {version = "^0.11.0", optional = true}
 sphinx-rtd-theme = {version = "^1.0.0", optional = true}
-voila = { version = "^0.3.6", optional = true }
-sphinx-issues = { version = "^3.0.1", optional = true }
+sphinx-issues = {version = "^3.0.1", optional = true}
+jupyterlab = {version = "^3.5.0", optional = true}
+jupyterlab-code-formatter = {version = "^1.5.3", optional = true}
 
 [tool.poetry.extras]
 docs = [
@@ -40,18 +39,17 @@ docs = [
 ]
 notebooks = [
     "matplotlib",
-    "jupyterlab",
     "myst-nb",
     "jupytext",
+    "jupyterlab",
     "jupyterlab-code-formatter",
 ]
 data = [
     "matplotlib",
     "numpydoc",
     "pydata-sphinx-theme",
-]
-web = [
-    "voila",
+    "jupyterlab",
+    "jupyterlab-code-formatter",
 ]
 devops = [
     "sphinx-issues",
@@ -61,19 +59,18 @@ all = [
     "sphinx-rtd-theme",
     # data & notebooks
     "matplotlib",
-    # notebooks
     "jupyterlab",
+    "jupyterlab-code-formatter",
+    # notebooks
     "myst-nb",
     "jupytext",
-    "jupyterlab-code-formatter",
     # data
     "numpydoc",
     "pydata-sphinx-theme",
-    # web
-    "voila",
     # devops
     "sphinx-issues",
 ]
+
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^5.0.4"
